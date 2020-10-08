@@ -5,6 +5,6 @@ export default class ErrorRepository {
 
   translate(code) {
     if (!this.errMap.has(code)) return 'Unknown error';
-    return this.errMap.get(code);
+    return this.errMap.has(code) ? this.errMap.get(code) : 'Unknown error';
   }
 }
